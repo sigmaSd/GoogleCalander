@@ -1,7 +1,7 @@
 import * as path from "jsr:@std/path@1.0.8";
 import { authenticate } from "npm:@google-cloud/local-auth@3.0.1";
 import { google } from "npm:googleapis@144.0.0";
-import { OAuth2Client } from "npm:google-auth-library";
+import { OAuth2Client } from "npm:google-auth-library@9.15.0";
 
 type JSONClient = OAuth2Client & {
   credentials: {
