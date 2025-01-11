@@ -53,7 +53,7 @@ async function saveCredentials(
 }
 
 async function authorize() {
-  let client = await loadSavedCredentialsIfExist();
+  let client = await loadSavedCredentialsIfExist() as JSONClient;
   if (client) {
     return client;
   }
