@@ -19,11 +19,11 @@ const SCOPES = [
   "https://www.googleapis.com/auth/calendar.events.owned",
 ];
 const TOKEN_PATH = path.join(
-  import.meta.dirname ?? "",
+  Deno.cwd(),
   "token.json",
 );
 const CREDENTIALS_PATH = path.join(
-  import.meta.dirname ?? "",
+  Deno.cwd(),
   "credentials.json",
 );
 
