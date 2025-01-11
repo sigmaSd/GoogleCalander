@@ -18,8 +18,14 @@ const SCOPES = [
   "https://www.googleapis.com/auth/calendar.events",
   "https://www.googleapis.com/auth/calendar.events.owned",
 ];
-const TOKEN_PATH = path.join(Deno.cwd(), "token.json");
-const CREDENTIALS_PATH = path.join(Deno.cwd(), "credentials.json");
+const TOKEN_PATH = path.join(
+  import.meta.dirname ?? "",
+  "token.json",
+);
+const CREDENTIALS_PATH = path.join(
+  import.meta.dirname ?? "",
+  "credentials.json",
+);
 
 async function loadSavedCredentialsIfExist() {
   try {
